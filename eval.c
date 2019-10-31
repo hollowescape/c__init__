@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 #define MAX 100
 
 char str[MAX];
@@ -10,7 +11,7 @@ typedef enum{
 }precedense;
 
 
-precedense gettoken(char *symbol, int *num){
+precedense gettoken(char *symbol, int *num){        // function to check token
     *symbol = str[(*num)++];
     switch(*symbol){
         case '(': return lparen ; break;
